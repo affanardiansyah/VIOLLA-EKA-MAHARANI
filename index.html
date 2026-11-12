@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spesial Untuk Violla Eka Maharani ✨</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Plus Jakarta Sans, Playfair Display, & Pacifico -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Canvas Confetti for Celebration -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                        script: ['"Pacifico"', 'cursive'],
+                    },
+                    colors: {
+                        roseSoft: '#FFF0F3',
+                        blush: '#FFCCD5',
+                        pinkAccent: '#FF4D6D',
+                        roseGold: '#C9184A',
+                        cream: '#FFF9FA',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Animations & Glassmorphism */
+        body {
+            background: linear-gradient(135deg, #FFF0F3 0%, #FFE5EC 50%, #FFF9FA 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            color: #4A1525;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.78);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1.5px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 20px 40px -15px rgba(255, 77, 109, 0.18);
+        }
+
+        /* Floating Background Hearts */
+        .floating-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .float-item {
+            position: absolute;
+            bottom: -50px;
+            animation: floatUp linear infinite;
+            opacity: 0.55;
+            user-select: none;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) rotate(0deg) scale(0.8);
+                opacity: 0;
+            }
+            15% {
+                opacity: 0.6;
+            }
+            85% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(-110vh) rotate(360deg) scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        /* Custom Range Slider */
+        input[type=range] {
+            -webkit-appearance: none;
+            width: 100%;
+            background: transparent;
+        }
+
+        input[type=range]:focus {
+            outline: none;
+        }
+
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 14px;
+            cursor: pointer;
+            border-radius: 999px;
+            transition: all 0.2s ease;
+        }
+
+        input[type=range]::-webkit-slider-thumb {
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+            background: #FF4D6D;
+            border: 4px solid #FFFFFF;
+            box-shadow: 0 4px 12px rgba(255, 77, 109, 0.45);
+            cursor: pointer;
+            -webkit-appearance: none;
+            margin-top: -9px;
+            transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        input[type=range]::-webkit-slider-thumb:hover,
+        input[type=range]:active::-webkit-slider-thumb {
+            transform: scale(1.2);
+            background: #C9184A;
+        }
+
+        /* Smooth Fade & Slide Transitions */
+        .fade-enter {
+            animation: fadeSlideIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes fadeSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(16px) scale(0.98);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* Pulse Heartbeat */
+        .heartbeat {
+            animation: beat 1.3s infinite ease-in-out;
+        }
+
+        @keyframes beat {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(1.14); }
+            45% { transform: scale(0.96); }
+            65% { transform: scale(1.08); }
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center p-4 sm:p-6 relative selection:bg-pinkAccent selection:text-white">
+
+    <!-- Background Floating Hearts & Sparkles -->
+    <div id="floating-container" class="floating-bg"></div>
+
+    <!-- Main Container -->
+    <main class="w-full max-w-md z-10 my-auto">
+
+        <!-- 1. LANDING SCREEN -->
+        <section id="screen-landing" class="glass-card rounded-3xl p-8 sm:p-11 text-center fade-enter">
+            <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-tr from-pink-200 to-rose-100 shadow-inner mb-6 heartbeat">
+                <span class="text-4xl">💌</span>
+            </div>
+
+            <p class="text-xs font-bold uppercase tracking-widest text-pinkAccent mb-2.5">Special Love Meter</p>
+            <h1 class="font-serif text-2xl sm:text-3xl font-bold text-rose-950 leading-snug mb-8">
+                Hai, <span class="text-pinkAccent block sm:inline">Violla Eka Maharani!</span> ✨
+            </h1>
+
+            <button onclick="startQuiz()" class="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-pinkAccent to-roseGold text-white font-semibold text-base sm:text-lg shadow-lg shadow-pinkAccent/30 hover:shadow-xl hover:shadow-pinkAccent/40 active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer">
+                <span>Mulai Vote</span>
+                <span class="text-xl">💕</span>
+            </button>
+        </section>
+
+        <!-- 2. QUIZ / VOTING SCREEN -->
+        <section id="screen-quiz" class="glass-card rounded-3xl p-6 sm:p-8 hidden">
+            <!-- Progress Header -->
+            <div class="flex items-center justify-between text-xs font-semibold text-rose-500 mb-2">
+                <span id="question-counter">Pertanyaan 1 dari 5</span>
+                <span id="progress-percent">20%</span>
+            </div>
+            <div class="w-full h-2.5 bg-rose-100 rounded-full overflow-hidden mb-6">
+                <div id="progress-bar" class="h-full bg-gradient-to-r from-pink-400 to-pinkAccent rounded-full transition-all duration-300" style="width: 20%"></div>
+            </div>
+
+            <!-- Question Content Container -->
+            <div id="question-body" class="fade-enter">
+                <div class="text-center mb-6">
+                    <span id="q-badge" class="inline-block px-3 py-1 rounded-full bg-rose-100 text-pinkAccent text-xs font-bold mb-3">
+                        Kategori: Rasa Sayang
+                    </span>
+                    <h2 id="q-title" class="font-serif text-xl sm:text-2xl font-bold text-rose-950 leading-snug">
+                        Seberapa sayang kamu ke aku hari ini?
+                    </h2>
+                </div>
+
+                <!-- Dynamic Interaction Area (Slider OR Choice Cards) -->
+                <div id="interaction-area" class="my-6">
+                    <!-- Injected via JS -->
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="flex items-center gap-3 mt-7">
+                <button id="btn-prev" onclick="prevQuestion()" class="py-3.5 px-4 rounded-2xl bg-rose-100/80 text-rose-700 font-semibold text-sm hover:bg-rose-200/70 active:scale-95 transition-all hidden cursor-pointer">
+                    ← Kembali
+                </button>
+                <button id="btn-next" onclick="nextQuestion()" class="flex-1 py-3.5 px-6 rounded-2xl bg-gradient-to-r from-pinkAccent to-roseGold text-white font-semibold text-base shadow-md shadow-pinkAccent/25 hover:shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer">
+                    <span id="btn-next-text">Lanjut</span>
+                    <span>→</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- 3. LOADING CALCULATION SCREEN -->
+        <section id="screen-loading" class="glass-card rounded-3xl p-8 sm:p-10 text-center hidden">
+            <div class="relative w-24 h-24 mx-auto mb-6 flex items-center justify-center">
+                <div class="absolute inset-0 rounded-full border-4 border-rose-200 border-t-pinkAccent animate-spin"></div>
+                <span class="text-4xl heartbeat">💖</span>
+            </div>
+            <h3 class="font-serif text-xl sm:text-2xl font-bold text-rose-950 mb-2">
+                Menghitung Kadar Cinta Violla...
+            </h3>
+            <p id="loading-subtext" class="text-sm text-rose-600 animate-pulse">
+                Menganalisis detak jantung & rasa nyaman... ✨
+            </p>
+        </section>
+
+        <!-- 4. RESULT & CONCLUSION SCREEN -->
+        <section id="screen-result" class="glass-card rounded-3xl p-6 sm:p-8 hidden">
+            <div class="text-center mb-5">
+                <span class="inline-block px-3.5 py-1 rounded-full bg-pink-100 text-roseGold text-xs font-bold tracking-wide uppercase mb-2">
+                    Hasil Kalkulasi Hati ✨
+                </span>
+                <h2 class="font-serif text-lg sm:text-xl font-semibold text-rose-900">
+                    Untuk <span class="font-bold text-pinkAccent">Violla Eka Maharani</span>
+                </h2>
+            </div>
+
+            <!-- Score Circle & Tier Badge -->
+            <div class="bg-gradient-to-br from-rose-50 to-pink-100/70 border border-pink-200/80 rounded-2xl p-5 text-center mb-5 relative overflow-hidden">
+                <div id="result-emoji" class="text-5xl mb-2 heartbeat">💖</div>
+                <div class="font-serif text-4xl sm:text-5xl font-bold text-roseGold mb-1">
+                    <span id="final-score">0</span>%
+                </div>
+                <div id="result-tier" class="inline-block mt-1 px-4 py-1.5 rounded-full bg-white text-pinkAccent font-bold text-sm sm:text-base shadow-sm">
+                    Cinta Banget 💕
+                </div>
+            </div>
+
+            <!-- Romantic Message -->
+            <div class="bg-white/75 rounded-2xl p-4 sm:p-5 border border-rose-100 mb-5">
+                <p id="result-message" class="text-sm text-rose-900 leading-relaxed text-center italic">
+                    <!-- Dynamic message -->
+                </p>
+            </div>
+
+            <!-- Breakdown Summary -->
+            <div class="mb-6">
+                <h4 class="text-xs font-bold uppercase tracking-wider text-rose-400 mb-2.5 px-1">
+                    Rincian Jawaban Kamu:
+                </h4>
+                <div id="breakdown-list" class="space-y-2 text-xs sm:text-sm">
+                    <!-- Dynamic items -->
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="space-y-2.5">
+                <button onclick="sendToWhatsApp()" class="w-full py-3.5 px-5 rounded-2xl bg-gradient-to-r from-emerald-500 to-green-600 text-white font-semibold text-sm sm:text-base shadow-lg shadow-emerald-500/25 hover:shadow-xl active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/></svg>
+                    <span>Kirim Hasil ke WhatsApp Aku</span>
+                </button>
+
+                <div class="grid grid-cols-2 gap-2.5">
+                    <button onclick="copyResultText()" class="py-3 px-4 rounded-2xl bg-rose-100 text-rose-800 font-semibold text-xs sm:text-sm hover:bg-rose-200/80 active:scale-95 transition-all cursor-pointer">
+                        📋 Salin Hasil
+                    </button>
+                    <button onclick="resetQuiz()" class="py-3 px-4 rounded-2xl bg-white border border-rose-200 text-rose-700 font-semibold text-xs sm:text-sm hover:bg-rose-50 active:scale-95 transition-all cursor-pointer">
+                        🔄 Ulangi Vote
+                    </button>
+                </div>
+            </div>
+
+            <!-- Custom Toast Notification -->
+            <div id="toast" class="fixed bottom-5 left-1/2 -translate-x-1/2 bg-rose-950 text-white text-xs font-medium px-4 py-2.5 rounded-full shadow-lg opacity-0 pointer-events-none transition-opacity duration-300 z-50">
+                Hasil berhasil disalin! 💕
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // --- 1. FLOATING HEARTS BACKGROUND GENERATOR ---
+        function createFloatingElements() {
+            const container = document.getElementById('floating-container');
+            const symbols = ['❤️', '💕', '✨', '🌸', '💖', '🌷', '🥰'];
+            const count = 18;
+
+            for (let i = 0; i < count; i++) {
+                const el = document.createElement('div');
+                el.className = 'float-item';
+                el.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+                el.style.left = Math.random() * 100 + 'vw';
+                el.style.fontSize = (Math.random() * 16 + 14) + 'px';
+                el.style.animationDuration = (Math.random() * 8 + 8) + 's';
+                el.style.animationDelay = (Math.random() * 8) + 's';
+                container.appendChild(el);
+            }
+        }
+        createFloatingElements();
+
+        // --- 2. QUESTIONS & VOTING DATA ---
+        const questions = [
+            {
+                id: 'sayang',
+                category: 'Rasa Sayang',
+                shortLabel: 'Kadar Sayang',
+                title: 'Seberapa sayang kamu ke aku hari ini?',
+                type: 'slider',
+                defaultValue: 85,
+                getReaction: (val) => {
+                    if (val < 30) return { emoji: '🥺', text: 'Kok dikit banget sih? Yakin nih?' };
+                    if (val < 60) return { emoji: '🙈', text: 'Masih malu-malu ngakuin ya?' };
+                    if (val < 80) return { emoji: '😊', text: 'Sayang banget nih ceritanya!' };
+                    if (val < 95) return { emoji: '🥰', text: 'Aduh meleleh aku bacanya!' };
+                    return { emoji: '💖', text: 'Sayang pol sampai ke langit ketujuh!' };
+                }
+            },
+            {
+                id: 'nyaman',
+                category: 'Kenyamanan',
+                shortLabel: 'Rasa Nyaman',
+                title: 'Seberapa nyaman kamu kalau lagi bareng atau ngobrol sama aku?',
+                type: 'slider',
+                defaultValue: 90,
+                getReaction: (val) => {
+                    if (val < 40) return { emoji: '😅', text: 'Masih canggung ya? Sini peluk dulu!' };
+                    if (val < 70) return { emoji: '😌', text: 'Lumayan bikin tenang pikiran ya~' };
+                    if (val < 90) return { emoji: '🧸', text: 'Udah kayak rumah sendiri ya nyamannya!' };
+                    return { emoji: '🏡✨', text: 'Safe place paling nyaman sedunia!' };
+                }
+            },
+            {
+                id: 'senyum',
+                category: 'Bikin Salting',
+                shortLabel: 'Bikin Senyum',
+                title: 'Seberapa sering aku bikin kamu senyum-senyum sendiri?',
+                type: 'choice',
+                defaultValue: 90,
+                options: [
+                    { label: 'Jarang sih, biasa aja 😐', score: 45, emoji: '😐' },
+                    { label: 'Lumayan sering, kadang salting 🤭', score: 75, emoji: '🤭' },
+                    { label: 'Sering banget tiap chat-an! 😊', score: 90, emoji: '😊' },
+                    { label: 'Tiap detik keinget terus! 😍', score: 100, emoji: '😍' }
+                ]
+            },
+            {
+                id: 'kangen',
+                category: 'Rasa Rindu',
+                shortLabel: 'Kadar Kangen',
+                title: 'Seberapa kangen kamu sama aku kalau lagi nggak ketemu?',
+                type: 'slider',
+                defaultValue: 88,
+                getReaction: (val) => {
+                    if (val < 40) return { emoji: '😒', text: 'Halah masa nggak kangen sih?' };
+                    if (val < 70) return { emoji: '🌷', text: 'Kangen tipis-tipis tapi kepikiran terus' };
+                    if (val < 92) return { emoji: '🥺💕', text: 'Kangen berat pengen cepet ketemu!' };
+                    return { emoji: '😭💖', text: 'Kangen akut! Pengen ketemu sekarang juga!' };
+                }
+            },
+            {
+                id: 'masa_depan',
+                category: 'Komitmen Kita',
+                shortLabel: 'Keyakinan Kita',
+                title: 'Seberapa yakin kamu kalau kita bakal terus bareng-bareng?',
+                type: 'choice',
+                defaultValue: 95,
+                options: [
+                    { label: 'Jalanin aja dulu pelan-pelan 🌱', score: 65, emoji: '🌱' },
+                    { label: 'Yakin dong, semoga lancar terus ✨', score: 85, emoji: '✨' },
+                    { label: 'Yakin banget sama kamu! 💕', score: 95, emoji: '💕' },
+                    { label: '100% yakin, maunya sama kamu selamanya 💍', score: 100, emoji: '💍' }
+                ]
+            }
+        ];
+
+        // State Variables
+        let currentIndex = 0;
+        let userAnswers = {};
+
+        // Initialize default answers
+        questions.forEach(q => {
+            if (q.type === 'slider') {
+                userAnswers[q.id] = { score: q.defaultValue, display: `${q.defaultValue}%` };
+            } else {
+                const defaultOpt = q.options.find(o => o.score === q.defaultValue) || q.options[2];
+                userAnswers[q.id] = { score: defaultOpt.score, display: defaultOpt.label };
+            }
+        });
+
+        // --- 3. NAVIGATION & RENDER LOGIC ---
+        function startQuiz() {
+            document.getElementById('screen-landing').classList.add('hidden');
+            const quizScreen = document.getElementById('screen-quiz');
+            quizScreen.classList.remove('hidden');
+            quizScreen.classList.add('fade-enter');
+            renderQuestion();
+        }
+
+        function renderQuestion() {
+            const q = questions[currentIndex];
+            const total = questions.length;
+
+            // Update Progress
+            document.getElementById('question-counter').textContent = `Pertanyaan ${currentIndex + 1} dari ${total}`;
+            const pct = Math.round(((currentIndex + 1) / total) * 100);
+            document.getElementById('progress-percent').textContent = `${pct}%`;
+            document.getElementById('progress-bar').style.width = `${pct}%`;
+
+            // Animate Body
+            const qBody = document.getElementById('question-body');
+            qBody.classList.remove('fade-enter');
+            void qBody.offsetWidth; // trigger reflow
+            qBody.classList.add('fade-enter');
+
+            document.getElementById('q-badge').textContent = `Kategori: ${q.category}`;
+            document.getElementById('q-title').textContent = q.title;
+
+            // Prev / Next Buttons
+            const btnPrev = document.getElementById('btn-prev');
+            if (currentIndex === 0) {
+                btnPrev.classList.add('hidden');
+            } else {
+                btnPrev.classList.remove('hidden');
+            }
+
+            const btnNextText = document.getElementById('btn-next-text');
+            btnNextText.textContent = (currentIndex === total - 1) ? 'Lihat Hasilnya ✨' : 'Lanjut';
+
+            // Render Interaction Area
+            const area = document.getElementById('interaction-area');
+            area.innerHTML = '';
+
+            if (q.type === 'slider') {
+                const currentVal = userAnswers[q.id].score;
+                const reaction = q.getReaction(currentVal);
+
+                area.innerHTML = `
+                    <div class="bg-rose-50/90 border border-rose-200/80 rounded-2xl p-6 text-center transition-all">
+                        <div id="slider-emoji" class="text-5xl mb-2 transition-transform duration-200">${reaction.emoji}</div>
+                        <div class="text-3xl font-bold text-roseGold mb-1">
+                            <span id="slider-val">${currentVal}</span>%
+                        </div>
+                        <p id="slider-text" class="text-xs sm:text-sm font-medium text-rose-700 mb-6 min-h-[20px]">
+                            ${reaction.text}
+                        </p>
+
+                        <input type="range" id="love-slider" min="0" max="100" value="${currentVal}" class="w-full">
+                        <div class="flex justify-between text-[11px] font-semibold text-rose-400 mt-2 px-1">
+                            <span>0%</span>
+                            <span>50%</span>
+                            <span>100%</span>
+                        </div>
+                    </div>
+                `;
+
+                const slider = document.getElementById('love-slider');
+                updateSliderTrack(slider, currentVal);
+
+                slider.addEventListener('input', (e) => {
+                    const val = parseInt(e.target.value, 10);
+                    const react = q.getReaction(val);
+                    document.getElementById('slider-val').textContent = val;
+                    const emojiEl = document.getElementById('slider-emoji');
+                    emojiEl.textContent = react.emoji;
+                    emojiEl.style.transform = `scale(${1 + (val / 400)})`;
+                    document.getElementById('slider-text').textContent = react.text;
+                    updateSliderTrack(slider, val);
+
+                    userAnswers[q.id] = { score: val, display: `${val}%` };
+                });
+
+            } else if (q.type === 'choice') {
+                const selectedScore = userAnswers[q.id].score;
+                const grid = document.createElement('div');
+                grid.className = 'space-y-3';
+
+                q.options.forEach((opt) => {
+                    const isSelected = opt.score === selectedScore;
+                    const btn = document.createElement('button');
+                    btn.type = 'button';
+                    btn.className = `w-full text-left p-4 rounded-2xl border-2 transition-all duration-200 flex items-center justify-between cursor-pointer ${
+                        isSelected
+                        ? 'border-pinkAccent bg-pink-50/90 shadow-md shadow-pinkAccent/10 scale-[1.01]'
+                        : 'border-rose-100 bg-white/70 hover:border-pink-300 hover:bg-rose-50/50'
+                    }`;
+
+                    btn.innerHTML = `
+                        <span class="font-medium text-sm sm:text-base text-rose-950 pr-2">${opt.label}</span>
+                        <span class="w-6 h-6 rounded-full flex items-center justify-center text-xs shrink-0 ${
+                            isSelected ? 'bg-pinkAccent text-white' : 'bg-rose-100 text-transparent'
+                        }">✓</span>
+                    `;
+
+                    btn.onclick = () => {
+                        userAnswers[q.id] = { score: opt.score, display: opt.label };
+                        renderQuestion(); // re-render active state
+                    };
+
+                    grid.appendChild(btn);
+                });
+
+                area.appendChild(grid);
+            }
+        }
+
+        function updateSliderTrack(slider, val) {
+            slider.style.background = `linear-gradient(to right, #FF4D6D 0%, #FF4D6D ${val}%, #FFE5EC ${val}%, #FFE5EC 100%)`;
+            slider.style.borderRadius = '999px';
+        }
+
+        function prevQuestion() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                renderQuestion();
+            }
+        }
+
+        function nextQuestion() {
+            if (currentIndex < questions.length - 1) {
+                currentIndex++;
+                renderQuestion();
+            } else {
+                calculateResults();
+            }
+        }
+
+        // --- 4. CALCULATION & RESULT TIER LOGIC ---
+        let calculatedSummary = {
+            avgScore: 0,
+            tierTitle: '',
+            message: ''
+        };
+
+        function calculateResults() {
+            document.getElementById('screen-quiz').classList.add('hidden');
+            const loadingScreen = document.getElementById('screen-loading');
+            loadingScreen.classList.remove('hidden');
+            loadingScreen.classList.add('fade-enter');
+
+            const subtexts = [
+                'Mengumpulkan semua senyum Violla... 😊',
+                'Mengukur seberapa nyaman hati kita... 🧸',
+                'Menyimpulkan takdir cinta kita... ✨'
+            ];
+            let step = 0;
+            const interval = setInterval(() => {
+                step++;
+                if (step < subtexts.length) {
+                    document.getElementById('loading-subtext').textContent = subtexts[step];
+                }
+            }, 650);
+
+            setTimeout(() => {
+                clearInterval(interval);
+                loadingScreen.classList.add('hidden');
+                showResultScreen();
+            }, 2100);
+        }
+
+        function showResultScreen() {
+            // Calculate average score
+            let totalScore = 0;
+            questions.forEach(q => {
+                totalScore += userAnswers[q.id].score;
+            });
+            const avg = Math.round(totalScore / questions.length);
+
+            let tier = '';
+            let emoji = '';
+            let message = '';
+
+            if (avg < 60) {
+                tier = 'Masih Malu-Malu Tapi Sayang 🙈';
+                emoji = '🙈💕';
+                message = `"Violla Eka Maharani, kayaknya kamu masih malu-malu ngakuin perasaanmu ya? Nggak apa-apa kok, pelan-pelan aja, yang penting aku bakal selalu berusaha bikin kamu makin nyaman dan makin sayang tiap harinya!"`;
+            } else if (avg < 80) {
+                tier = 'Sayang Banget 💕';
+                emoji = '🥰🌷';
+                message = `"Makasih ya Violla sayang! Kelihatan banget kalau kamu udah nyaman dan sayang banget sama aku. Semoga rasa ini terus tumbuh makin besar dan bikin hari-hari kita selalu bahagia bareng!"`;
+            } else if (avg < 95) {
+                tier = 'Cinta Mati & Nyaman Pol 💖';
+                emoji = '💖✨';
+                message = `"Wah, hasilnya bikin hati aku meleleh, Violla Eka Maharani! Kamu bukan cuma sayang, tapi udah se-nyaman dan se-cinta itu sama aku. Aku janji bakal selalu jaga kepercayaan dan senyum manis kamu!"`;
+            } else {
+                tier = 'Soulmate Sejati & Cinta Selamanya 💍✨';
+                emoji = '👑💖💍';
+                message = `"Skor hampir sempurna dari Violla Eka Maharani! Ini bukti kalau kita emang udah klik banget, saling sayang, dan saling nyaman. Makasih udah hadir di hidup aku—let's keep growing and loving each other forever!"`;
+            }
+
+            calculatedSummary = { avgScore: avg, tierTitle: tier, message };
+
+            // Populate UI
+            document.getElementById('result-emoji').textContent = emoji;
+            document.getElementById('result-tier').textContent = tier;
+            document.getElementById('result-message').textContent = message;
+
+            // Animate Number Counter
+            const scoreEl = document.getElementById('final-score');
+            let currentDisplay = 0;
+            const counterTimer = setInterval(() => {
+                if (currentDisplay >= avg) {
+                    scoreEl.textContent = avg;
+                    clearInterval(counterTimer);
+                } else {
+                    currentDisplay += Math.ceil((avg - currentDisplay) / 6);
+                    scoreEl.textContent = currentDisplay;
+                }
+            }, 35);
+
+            // Populate Breakdown List
+            const listEl = document.getElementById('breakdown-list');
+            listEl.innerHTML = '';
+            questions.forEach(q => {
+                const ans = userAnswers[q.id];
+                const item = document.createElement('div');
+                item.className = 'flex items-center justify-between bg-rose-50/70 px-3.5 py-2.5 rounded-xl border border-rose-100';
+                item.innerHTML = `
+                    <span class="text-rose-800 font-medium">${q.shortLabel}</span>
+                    <span class="text-pinkAccent font-bold text-right max-w-[58%] truncate">${ans.display}</span>
+                `;
+                listEl.appendChild(item);
+            });
+
+            const resultScreen = document.getElementById('screen-result');
+            resultScreen.classList.remove('hidden');
+            resultScreen.classList.add('fade-enter');
+
+            // Trigger Confetti Celebration
+            launchConfetti();
+        }
+
+        function launchConfetti() {
+            if (typeof confetti === 'function') {
+                confetti({
+                    particleCount: 80,
+                    spread: 70,
+                    origin: { y: 0.6 },
+                    colors: ['#FF4D6D', '#FF8FA3', '#FFB3C1', '#FFD166']
+                });
+            }
+        }
+
+        // --- 5. SHARE & RESET ACTIONS ---
+        function generateShareMessage() {
+            let text = `Hai sayang! Aku (Violla Eka Maharani) barusan isi Love Meter buat kamu 💕\n\n`;
+            text += `📊 *Skor Total:* ${calculatedSummary.avgScore}%\n`;
+            text += `🏆 *Kesimpulan:* ${calculatedSummary.tierTitle}\n\n`;
+            text += `*Rincian jawaban aku:*\n`;
+            questions.forEach(q => {
+                text += `• ${q.shortLabel}: ${userAnswers[q.id].display}\n`;
+            });
+            text += `\nLove you! 🥰✨`;
+            return text;
+        }
+
+        function sendToWhatsApp() {
+            const text = encodeURIComponent(generateShareMessage());
+            window.open(`https://wa.me/628980338339?text=${text}`, '_blank');
+        }
+
+        function copyResultText() {
+            const text = generateShareMessage();
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                showToast('Hasil vote berhasil disalin! 💕');
+            } catch (err) {
+                showToast('Gagal menyalin teks.');
+            }
+            document.body.removeChild(textarea);
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            toast.textContent = msg;
+            toast.classList.remove('opacity-0');
+            setTimeout(() => {
+                toast.classList.add('opacity-0');
+            }, 2500);
+        }
+
+        function resetQuiz() {
+            currentIndex = 0;
+            document.getElementById('screen-result').classList.add('hidden');
+            const landing = document.getElementById('screen-landing');
+            landing.classList.remove('hidden');
+            landing.classList.add('fade-enter');
+        }
+    </script>
+</body>
+</html>
